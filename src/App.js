@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+
+//import Component
+import Parent from './Parent'
+import CreateContext from './CreateContext'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <CreateContext.Provider value={1}>
+      <div>
+        <Parent name="Abdul moiz" />
+      </div>
+    </CreateContext.Provider>
   );
 }
 
